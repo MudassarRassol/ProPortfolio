@@ -4,7 +4,7 @@ import Header from "@/app/Components/Header";
 import { useSelector } from "react-redux";
 import Home from "@/app/Components/pages/Home";
 import Footer from "@/app/Components/Footer";
-import ContectUS from "../Contect/page";
+import ContectUS from "../Contect/ContectUS";
 import AboutMe from "../AboutMe/page";
 import ProjectSlider from "../Project/page";
 import Experience from "../Expirence/Experience";
@@ -18,16 +18,16 @@ const page = () => {
           theme == "light" ? "light" : "dark"
         } `}
       >
-        <div id="home">
+        <div id="Home">
           <Home />
         </div>
-        <div id="AboutMe">
+        <div id="About Me " className={`${theme == "light" ? "light" : "dark"}`} >
           <AboutMe />
         </div>
         <div id="Experience">
           <Experience />
         </div>
-        <div id="ProjectSlider">
+        <div id="Project">
           <ProjectSlider />
         </div>
         <div id="ContectUS">

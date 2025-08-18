@@ -16,7 +16,7 @@ gsap.registerPlugin(SplitText); // ✅ Register the plugin
 const Header = () => {
   const dispatch = useDispatch();
   const splitRefs = useRef([]); // store SplitText instances
-  const theme = useSelector((state)=>state.theme.theme)
+  const theme = useSelector((state) => state.theme.theme);
   const [images, setimages] = useState(assets.images.layingman);
   const [menu, setmenu] = useState(false);
 
@@ -48,15 +48,16 @@ const Header = () => {
     }
   };
 
-
   // if(theme == "light"){
   //   gsap.fromTo("home", { backgroundColor: "#1E2D40" }, { backgroundColor: "#AA", duration: 1 });
   // }
 
-
-
   useGSAP(() => {
-    gsap.fromTo("#logo , #name , #theme ,#menu" , { y: -100 }, { y: 0, duration: 1 , stagger : 0.3 , ease:"sine" });
+    gsap.fromTo(
+      "#logo , #name , #theme ,#menu",
+      { y: -100 },
+      { y: 0, duration: 1, stagger: 0.3, ease: "sine" }
+    );
   }, []);
 
   const menuenteranimation = (index) => {
@@ -93,12 +94,17 @@ const Header = () => {
     });
   };
 
-    const [cursorSize, setCursorSize] = useState(8);
-    const [cursorActive, setCursorActive] = useState(true);
+  const [cursorSize, setCursorSize] = useState(8);
+  const [cursorActive, setCursorActive] = useState(true);
 
   return (
     <>
-      <div id="home" className={`${theme == "dark" ? 'dark' : 'light'} w-full overflow-hidden `}>
+      <div
+        id="home"
+        className={`${
+          theme == "dark" ? "dark" : "light"
+        } w-full overflow-hidden `}
+      >
         <div className="flex items-center justify-between p-3">
           <div className="flex items-center gap-3">
             <Image
@@ -113,41 +119,38 @@ const Header = () => {
               MR DEV
             </h1>
           </div>
-          <div className=" flex items-center gap-2  cursor-pointer " >
-            {
-              theme == "dark" ? (
-                <IoSunny
-                  size={30}
-                  id="theme"
-                     color={`${theme == 'dark' ? '#02F8BE' : '#1E2D40'}`}
-                  onClick={() => {
-                    dispatch(toggleTheme());
-                    console.log(theme);
-                  }}
-                  className=" hover:animate-spin   "
-                />
-              ) : (
-                <IoMoon
-                  size={25}
-                  id="theme"
-                  color={`${theme == 'dark' ? '#02F8BE' : '#1E2D40'}`}
-                  onClick={() => {
-                    dispatch(toggleTheme());
-                     console.log(theme);
-                  }}
-
-                  className=" hover:animate-pulse "
-                />
-              )
-            }
-                      <IoMenu
-            size={30}
-            id="menu"
-              color={`${theme == 'dark' ? '#02F8BE' : '#1E2D40'}`}
-            onClick={() => {
-              ontoggle(true);
-            }}
-          />
+          <div className=" flex items-center gap-2  cursor-pointer ">
+            {theme == "dark" ? (
+              <IoSunny
+                size={30}
+                id="theme"
+                color={`${theme == "dark" ? "#02F8BE" : "#1E2D40"}`}
+                onClick={() => {
+                  dispatch(toggleTheme());
+                  console.log(theme);
+                }}
+                className=" hover:animate-spin   "
+              />
+            ) : (
+              <IoMoon
+                size={25}
+                id="theme"
+                color={`${theme == "dark" ? "#02F8BE" : "#1E2D40"}`}
+                onClick={() => {
+                  dispatch(toggleTheme());
+                  console.log(theme);
+                }}
+                className=" hover:animate-pulse "
+              />
+            )}
+            <IoMenu
+              size={30}
+              id="menu"
+              color={`${theme == "dark" ? "#02F8BE" : "#1E2D40"}`}
+              onClick={() => {
+                ontoggle(true);
+              }}
+            />
           </div>
         </div>
       </div>
@@ -156,29 +159,43 @@ const Header = () => {
 
       <div
         id="menubox"
-        className={menu == true ? `fixed top-0 left-0 ${theme == "dark" ? 'dark' : 'light'} z-50` : "hidden"}
+        className={
+          menu == true
+            ? `fixed top-0 left-0 ${theme == "dark" ? "dark" : "light"} z-50`
+            : "hidden"
+        }
       >
-          <Cursor size={cursorSize} active={cursorActive} theme={theme} />
+        <Cursor size={cursorSize} active={cursorActive} theme={theme} />
         <div className="p-5 flex justify-between">
           <div className="flex flex-col">
-            {["Home", "Project", "About Us", "Contact Us"].map(
-              (page, index) => (
-                <Link
-                  href={`/pages/${page}`}
-                  key={index}
-                  className={`pages text-5xl mt-6 ${theme == "dark" ? 'text-dark-stoke text-[#1E2D40]' : 'text-light-stoke  text-[#ffffff]'} z-50`}
-                  onMouseEnter={() => {
-                    menuenteranimation(index) ,  setCursorSize(10)
-                  } }
-                  onMouseLeave={() => menuleaveanimation(index)}
-                >
-                  {page}
-                </Link>
-              )
-            )}
+            {["Home", "About Me", "Project", "Experience"].map((page, index) => (
+              <Link
+                href={`#${page}`} // 👈 match your section id
+                key={index}
+                scroll={false} // prevents full page reload in Next.js
+                className={`pages text-5xl mt-6 ${
+                  theme == "dark"
+                    ? "text-dark-stoke text-[#1E2D40]"
+                    : "text-light-stoke text-[#ffffff]"
+                } z-50`}
+                onMouseEnter={() => {
+                  menuenteranimation(index), setCursorSize(10);
+                }}
+                onMouseLeave={() => menuleaveanimation(index)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setmenu(false);
+                  document
+                    .getElementById(page)
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                {page}
+              </Link>
+            ))}
           </div>
           <IoCloseOutline
-             color={`${theme == 'dark' ? '#02F8BE' : '#1E2D40'}`}
+            color={`${theme == "dark" ? "#02F8BE" : "#1E2D40"}`}
             className="mt-6 hover:animate-spin "
             size={30}
             onMouseEnter={() => {
@@ -193,20 +210,21 @@ const Header = () => {
           />
         </div>
 
-        <div className="w-full flex absolute bottom-0  justify-center" 
-        onMouseEnter={() => {
-          setCursorSize(16);
-        }}
-        onMouseLeave={() => {
-          setCursorSize(8);
-        }}
+        <div
+          className="w-full flex absolute bottom-0  justify-center"
+          onMouseEnter={() => {
+            setCursorSize(16);
+          }}
+          onMouseLeave={() => {
+            setCursorSize(8);
+          }}
         >
           <Image
             src={images}
             alt="Company Logo"
             width={200}
             height={200}
-            className={` w-xl   ${theme == "dark" ? 'invert' : ''}   `}
+            className={` w-xl   ${theme == "dark" ? "invert" : ""}   `}
             id="image"
           />
         </div>
