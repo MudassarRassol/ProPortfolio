@@ -5,9 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import assets from "@/app/assets/assets";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
-// import GraySection from "@/app/pages/AboutMe/page";
-import AboutMeSection from "@/app/pages/AboutMe/page";
-import Project from "@/app/pages/Project/page";
+
 
 gsap.registerPlugin(ScrollTrigger);
 

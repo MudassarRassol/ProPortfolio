@@ -184,6 +184,7 @@ const Header = () => {
                 onMouseLeave={() => menuleaveanimation(index)}
                 onClick={(e) => {
                   e.preventDefault();
+                  setimages(assets.images.layingman);
                   setmenu(false);
                   document
                     .getElementById(page)
