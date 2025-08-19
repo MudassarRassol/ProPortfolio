@@ -67,7 +67,7 @@ const Loading = () => {
   return (
     <div
       id="mainloadingbox"
-      className="flex items-center justify-center h-[100vh] dark relative overflow-hidden "
+      className="flex items-center justify-center h-screen dark relative overflow-hidden "
     >
       <div className="w-[95%] h-[90vh] flex justify-between relative overflow-hidden">
         <div
