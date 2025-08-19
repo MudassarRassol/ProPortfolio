@@ -3,11 +3,6 @@
 A modern web application built with **Next.js** and other cutting-edge technologies.  
 This project is designed to be fast, responsive, and developer-friendly.  
 
----
-
-## 📸 Demo  
-
-(Add screenshots or a demo link here, e.g., deployed on Vercel)  
 
 ---
 
