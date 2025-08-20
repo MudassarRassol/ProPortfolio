@@ -82,7 +82,7 @@ const Header = () => {
       gsap.fromTo("#image", { height: 0 }, { height: 450, duration: 1 });
     } else if (index === 3) {
       gsap.fromTo("#image", { height: 0 }, { height: 450, duration: 1 });
-      setimages(assets.images.ContectUS);
+      setimages(assets.images.Project);
     }
   };
 
