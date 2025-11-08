@@ -133,7 +133,7 @@ const AboutMe = () => {
     },
     {
       num: "(04)",
-      title: "Full-Stack Development",
+      title: "MERN-Stack Development",
       des: "From frontend interactions to backend APIs, I build complete web solutions. I work with modern stacks to deliver apps that are scalable, maintainable, and ready for real-world users.",
       skills: [
         { num: "01", des: "React, Node.js, Express.js, Next.js" },
