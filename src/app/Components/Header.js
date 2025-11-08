@@ -120,29 +120,29 @@ const Header = () => {
             </h1>
           </div>
           <div className=" flex items-center gap-2  cursor-pointer ">
-            {theme == "dark" ? (
-              <IoSunny
-                size={30}
-                id="theme"
-                color={`${theme == "dark" ? "#02F8BE" : "#1E2D40"}`}
-                onClick={() => {
-                  dispatch(toggleTheme());
-                  console.log(theme);
-                }}
-                className=" hover:animate-spin   "
-              />
-            ) : (
-              <IoMoon
-                size={25}
-                id="theme"
-                color={`${theme == "dark" ? "#02F8BE" : "#1E2D40"}`}
-                onClick={() => {
-                  dispatch(toggleTheme());
-                  console.log(theme);
-                }}
-                className=" hover:animate-pulse "
-              />
-            )}
+            // {theme == "dark" ? (
+            //   <IoSunny
+            //     size={30}
+            //     id="theme"
+            //     color={`${theme == "dark" ? "#02F8BE" : "#1E2D40"}`}
+            //     onClick={() => {
+            //       dispatch(toggleTheme());
+            //       console.log(theme);
+            //     }}
+            //     className=" hover:animate-spin   "
+            //   />
+            // ) : (
+            //   <IoMoon
+            //     size={25}
+            //     id="theme"
+            //     color={`${theme == "dark" ? "#02F8BE" : "#1E2D40"}`}
+            //     onClick={() => {
+            //       dispatch(toggleTheme());
+            //       console.log(theme);
+            //     }}
+            //     className=" hover:animate-pulse "
+            //   />
+            // )}
             <IoMenu
               size={30}
               id="menu"
