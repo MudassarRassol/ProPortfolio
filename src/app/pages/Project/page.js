@@ -63,7 +63,7 @@ const ProjectSlider = () => {
         { name: "Node.js", icon: <SiNodedotjs className="text-green-500 w-6 h-6" /> },
         { name: "Express", icon: <SiExpress className="text-gray-700 w-6 h-6" /> },
       ],
-      image: assets.images.MedicalP.png,
+      image: assets.images.Medical,
       fullStack: true,
     },
   ];
