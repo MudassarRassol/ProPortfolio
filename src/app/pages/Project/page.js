@@ -51,6 +51,21 @@ const ProjectSlider = () => {
       image: assets.images.BookP,
       fullStack: true,
     },
+    {
+      title: "Medical inventory management",
+      description: "A full-stack Medical inventory management platform",
+      link: "https://new-day-kappa.vercel.app/",
+      tech: [
+        { name: "React", icon: <SiReact className="text-blue-500 w-6 h-6" /> },
+        { name: "Next.js", icon: <SiNextdotjs className="text-black w-6 h-6" /> },
+        { name: "MongoDB", icon: <SiMongodb className="text-green-600 w-6 h-6" /> },
+        { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400 w-6 h-6" /> },
+        { name: "Node.js", icon: <SiNodedotjs className="text-green-500 w-6 h-6" /> },
+        { name: "Express", icon: <SiExpress className="text-gray-700 w-6 h-6" /> },
+      ],
+      image: assets.images.MedicalP.png,
+      fullStack: true,
+    },
   ];
 
   return (
