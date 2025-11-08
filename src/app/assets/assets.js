@@ -18,6 +18,7 @@ const assets = {
     mangidcom: "/man-1835-unscreen.gif",
     BookP: "/Book.png",
     CarP: "/car.png",
+    Medical : "/MedicalP.png"
   }
 };
 
