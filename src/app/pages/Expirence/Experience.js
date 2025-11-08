@@ -19,7 +19,7 @@ const Experience = () => {
     },
     {
       year: "2025 (4th Semester)",
-      title: "Full-Stack Developer – Book Donation Platform",
+      title: "MERN-Stack Developer – Book Donation Platform",
       place: "College Project",
       description:
         "Developed a full-stack platform for book donations using Next.js, TypeScript, MongoDB, and Tailwind CSS. Authentication, and user-friendly design.",
