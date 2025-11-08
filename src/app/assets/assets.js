@@ -12,7 +12,7 @@ const assets = {
     linkedin: "/linkedin.png",
     instagram: "/instagram.png",
     resume: "/resume.png",
-    resumefordownload: "/Mudassar Rasool.pdf",
+    resumefordownload: "/Mudassar Rasool (Resume).pdf",
     flatcomputer: "/flat-lay-computer-laptop-isolated-whtie-background.jpg",
     hlo: "/Hlo.gif",
     mangidcom: "/man-1835-unscreen.gif",
