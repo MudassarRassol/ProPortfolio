@@ -104,7 +104,7 @@ const Home = () => {
   const icons = [
     {
       src: assets.images.linkedin,
-      link: "https://linkedin.com/in/yourusername",
+      link: "www.linkedin.com/in/mudassar-rasool-b15130300",
     },
     { src: assets.images.github, link: "https://github.com/MudassarRassol" },
     {
